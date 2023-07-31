@@ -1,8 +1,8 @@
 """Solving 8 queens problem """
 INDEX = 8  # size of the board
 
-# array to store a solution. This gets overwritten after printing one.
-# INDEX represents the row and the value represents the column
+# array to store a solution. This gets overwritten after adding the solution to the list.
+# index represents the row and the value represents the column
 solution = [[-1] for _ in range(INDEX)]
 solution_list = []  # list of solutions
 
@@ -11,7 +11,7 @@ solution_list = []  # list of solutions
 def is_safe(row, col):
     """Check whether it is safe to place the queen"""
 
-    # check previous rows where we have placed queens
+    # check previous rows where we have already placed queens
     for k in range(0, row):
         # check row and column
         if (k == row) or (solution[k] == col):
