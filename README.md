@@ -1,4 +1,4 @@
-# eight-queens
+# Eight-queens
 Solution for classic 8 queens problem
 
 Each row should have one queen, and each column should have one queen. Also, we must ensure that these queens do not attack diagonally.
@@ -12,3 +12,7 @@ I am not using any python libraries. You just need to have python installed on y
 Run the following command to see the results
 
 python main.py
+
+# WebAssembly
+
+Run this python program on the browser using WebAssembly
