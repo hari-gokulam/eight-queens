@@ -1,6 +1,6 @@
 function createBoard(boardId) {
-    const boardElement = document.getElementById('board');
-    const boardFragment = document.createDocumentFragment();
+    const resultsElement = document.getElementById('results');
+    const resultsFragment = document.createDocumentFragment();
 
     for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
@@ -9,16 +9,16 @@ function createBoard(boardId) {
             const cellDiv = document.createElement('div');
             cellDiv.id = sId;
             cellDiv.className = `cell ${bg}`;
-            boardFragment.appendChild(cellDiv);
+            resultsFragment.appendChild(cellDiv);
         }
     }
 
     const chessboardDiv = document.createElement('div');
     chessboardDiv.id = boardId;
     chessboardDiv.className = 'chessboard';
-    chessboardDiv.appendChild(boardFragment);
+    chessboardDiv.appendChild(resultsFragment);
 
-    boardElement.appendChild(chessboardDiv);
+    resultsElement.appendChild(chessboardDiv);
 }
 
 function addQueen(boardId, r, c) {
