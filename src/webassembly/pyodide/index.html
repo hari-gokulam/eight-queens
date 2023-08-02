@@ -9,11 +9,19 @@
 </head>
 
 <body>
+    <h3>WebAssembly</h3>
+    <p>We have a program that solve the classic 8 queens problem.  This is written in Python. 'get_positions' function returns
+        an array of possible solutions. We use pyodide to load the python program. The solutions returned from the python program
+        is presented in graphical form using HTML, CSS and JavaScript.
 
-    <button onclick="runPython()">Click here to see the results</button>
+    </p>
+    <p>Click the following button to load the python module and run it</p>
+    <button onclick="runPython()">Try me</button>
     <hr />
     
-    <div id="results" class="solutions"></div>
+    <div id="results" class="solutions">
+        <img id="loader" style="display:none" src="https://gifdb.com/images/high/buffering-animated-text-icon-loading-u1h739who8u5mtw3.gif" />
+    </div>
 </body>
 
 </html>

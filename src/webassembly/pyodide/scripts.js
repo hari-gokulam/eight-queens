@@ -41,10 +41,11 @@ async function fetchAndLoadPythonScript(pyodide) {
 
 async function runPython() {
     console.log("runPython");
+    const loader = document.getElementById('loader');
+    loader.style = "display: block";
 
     const pyodide = await loadPyodide();
     await fetchAndLoadPythonScript(pyodide);
-
 
     pkg = pyodide.pyimport("chessscript")
     const results = pkg.get_positions();
@@ -59,5 +60,6 @@ async function runPython() {
             addQueen(boardId, x, y);
         }
     }
+    loader.style = "display:none";
 }
 
