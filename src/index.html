@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebAssembly</title>
+    <style>
+        main {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .content {
+            margin: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    <ul>
-        <li>Using Pyodide -> <a href="./webassembly/pyodide/index.html">Check it out</a></li>
-    </ul>
-    
+    <main>
+        <h3>WebAssembly</h3>
+        <div class="content">
+            <p>
+                'chess.py' is program written on Python to solve the 'classical 8 queens' problem. The program uses
+                recursion to solve it.
+                It returns an array with solutions. Each solution is also represented as an array, index representing
+                the
+                row and value the column.
+            </p>
+            <p>
+                The idea is to run this program on a web page using WebAssembly. We have multiple options to acheive
+                this.
+            </p>
+            <ul>
+                <li>Using Pyodide -> <a href="./webassembly/pyodide/index.html">Check it out</a></li>
+            </ul>
+        </div>
+    </main>
 </body>
+
 </html>
