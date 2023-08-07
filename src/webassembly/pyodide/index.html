@@ -4,23 +4,35 @@
 <head>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js" > </script>
-    
+    <script src="scripts.js"> </script>
+    <style>
+        main {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .content {
+            margin: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <h3>WebAssembly</h3>
-    <p>We have a program that solve the classic 8 queens problem.  This is written in Python. 'get_positions' function returns
-        an array of possible solutions. We use pyodide to load the python program. The solutions returned from the python program
-        is presented in graphical form using HTML, CSS and JavaScript.
+    <main>
+        <h3>WebAssembly using Pyodide</h3>
+        <p> We use pyodide to load the python program. The solutions returned from the
+            python program
+            is presented in graphical form using HTML, CSS and JavaScript.
 
-    </p>
-    <p>Click the following button to load the python module and run it</p>
-    <button onclick="runPython()">Try me</button>
+        </p>
+        <p>Click the following button to load the python module and run it</p>
+        <button onclick="runPython()">Run and Show the results</button>
+    </main>
     <hr />
-    
+
     <div id="results" class="solutions">
-        <img id="loader" style="display:none" src="https://gifdb.com/images/high/buffering-animated-text-icon-loading-u1h739who8u5mtw3.gif" />
+        <img id="loader" style="display:none"
+            src="https://gifdb.com/images/high/buffering-animated-text-icon-loading-u1h739who8u5mtw3.gif" />
     </div>
 </body>
 
